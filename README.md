@@ -1,20 +1,37 @@
-# Site da AdlGames Studio - Em Breve
+ # Site da AdlGames Studio - Em Breve
 
-Este repositório contém o código da página inicial do site oficial da **AdlGames Studio**, atualmente com a mensagem "Em Breve". O site será atualizado com informações sobre os projetos e jogos desenvolvidos pela AdlGames Studio no futuro.
+    Este repositório contém o código da página inicial do site oficial da **AdlGames Studio**, atualmente com a mensagem "Em Breve". O site será atualizado com informações sobre os projetos e jogos desenvolvidos pela AdlGames Studio no futuro.
 
-### Funcionalidade
+    ### Funcionalidade
 
-- A página exibe uma imagem com a mensagem "Em Breve", indicando que o site está em construção.
-- A página foi criada de forma simples, com HTML e CSS, e está pronta para ser expandida com o conteúdo completo do site assim que os projetos forem concluídos.
+    - A página exibe uma mensagem informando que o site está em construção e um link para redirecionamento manual para a loja HavenMC.
+    - O redirecionamento automático acontece após 2 segundos, mas o link de fallback está disponível caso o redirecionamento não funcione.
 
-### Estrutura de Arquivos
+    ### Como Usar
 
-- **index.html**: O arquivo principal da página.
-- **styles.css**: Arquivo de estilos CSS para a página.
-- **imagens/**: Diretório com a imagem que contém a mensagem "Em Breve".
+    1. Clone este repositório para o seu ambiente local:
+       ```bash
+       git clone https://github.com/LanoyinGamerOFC/adl-games-site.git
+       ```
 
-### Como Usar
+    2. Abra a pasta do projeto:
+       ```bash
+       cd adl-games-site
+       ```
 
-1. Clone este repositório para o seu ambiente local:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    3. Coloque os arquivos em seu servidor web para servir a página inicial do site.
+       - A página `index.html` será a página inicial do seu site.
+
+    ### Tecnologias Usadas
+
+    - HTML5
+    - CSS3
+    - JavaScript (para funcionalidades futuras)
+    
+    ### Licença
+
+    Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+    ### Contato
+
+    Para mais informações sobre os projetos da **AdlGames Studio**, entre em contato pelo e-mail [lanoyin@havenmc.com.br](mailto:lanoyin@havenmc.com.br).
