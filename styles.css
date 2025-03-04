@@ -18,85 +18,98 @@ body {
     text-align: center;
 }
 
-/* Estilização do menu */
+/* Cabeçalho */
 header {
     width: 100%;
     position: absolute;
     top: 0;
     background: rgba(0, 0, 0, 0.9);
-    padding: 15px 0;
-}
-
-/* Menu Desktop */
-nav ul {
-    list-style: none;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-nav ul li {
-    display: inline;
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
 
-nav ul li a {
+/* Botão do menu (hambúrguer) */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Menu lateral (sidebar) */
+nav#sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+}
+
+/* Quando ativado, o menu aparece */
+nav#sidebar.active {
+    left: 0;
+}
+
+/* Botão de fechar o menu */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Estilização dos links do menu */
+nav#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav#sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+nav#sidebar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-/* Efeito suave ao passar o mouse nos itens do menu */
-nav ul li a:hover {
-    color: #FFD700;
-    transform: scale(1.1);
-}
-
-/* Estilização do botão do menu (mobile) */
-.menu-toggle {
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    width: 100%;
-    transition: background 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Animação para o menu responsivo */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+/* Quando um item do menu é selecionado, ele fica roxo */
+nav#sidebar ul li a:hover {
+    color: #8A2BE2;
+}
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    }
+/* Animação para "Shop (Em breve)" */
+.animated-text {
+    background-image: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff26, #00c3ff, #7a00ff, #ff00c3);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorChange 3s linear infinite;
+}
 
-    /* Ativa o menu com animação */
-    nav ul.active {
-        height: 250px;
-        opacity: 1;
-    }
-
-    nav ul li {
-        padding: 10px 0;
-        width: 100%;
-    }
+/* Keyframes para a animação de cor */
+@keyframes colorChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Estilização do título */
