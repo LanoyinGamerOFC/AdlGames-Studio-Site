@@ -18,12 +18,46 @@ body {
     text-align: center;
 }
 
+/* Estilização do menu */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Estilização do título */
 .container h1 {
     font-size: 50px;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Estilização do rodapé */
 footer {
     position: absolute;
     bottom: 10px;
