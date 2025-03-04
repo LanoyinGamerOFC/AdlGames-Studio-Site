@@ -25,7 +25,6 @@ header {
     top: 0;
     background: rgba(0, 0, 0, 0.9);
     padding: 15px 0;
-    transition: background 0.3s ease-in-out;
 }
 
 /* Menu Desktop */
@@ -51,7 +50,7 @@ nav ul li a {
 
 /* Efeito suave ao passar o mouse nos itens do menu */
 nav ul li a:hover {
-    color: #6d38a8;
+    color: #FFD700;
     transform: scale(1.1);
 }
 
@@ -69,22 +68,6 @@ nav ul li a:hover {
     transition: background 0.3s ease-in-out;
 }
 
-/* Estilização do botão de fechar */
-.close-menu {
-    display: none;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
-
-.close-menu:hover {
-    color: #6d38a8;
-}
-
 /* Animação para o menu responsivo */
 @media screen and (max-width: 768px) {
     .menu-toggle {
@@ -98,24 +81,21 @@ nav ul li a:hover {
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
-        max-height: 0;
+        height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+        opacity: 0;
+        transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
 
-    /* Garante que o menu exiba todas as opções corretamente */
+    /* Ativa o menu com animação */
     nav ul.active {
-        max-height: none;
-        overflow: visible;
+        height: 250px;
+        opacity: 1;
     }
 
     nav ul li {
         padding: 10px 0;
         width: 100%;
-    }
-
-    .close-menu {
-        display: block;
     }
 }
 
@@ -138,7 +118,7 @@ footer {
 }
 
 footer a {
-    color: #6d38a8;
+    color: #FFD700;
     text-decoration: none;
     font-weight: bold;
 }
