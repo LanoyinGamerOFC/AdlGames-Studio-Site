@@ -1,6 +1,6 @@
 /* © 2025 AdlGames Studio. Todos os direitos reservados. */
 /* Desenvolvido por AdlGames Studio | AdlGames.com.br */
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +38,11 @@ header {
 .logo {
     font-size: 22px;
     font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Botão do menu (hambúrguer) */
@@ -114,14 +119,21 @@ nav#sidebar ul li a:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* Estilização do título */
-.container h1 {
-    font-size: 50px;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+/* Emojis animados */
+.emoji-animation {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: moveEmojis 2s infinite alternate;
 }
 
-/* Estilização do rodapé */
+@keyframes moveEmojis {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+/* Rodapé */
 footer {
     position: fixed;
     bottom: 10px;
@@ -131,7 +143,7 @@ footer {
     color: white;
     font-size: 14px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    z-index: 998; /* Agora fica atrás da barra lateral */
+    z-index: 998; /* Fica abaixo da barra lateral */
 }
 
 footer a {
