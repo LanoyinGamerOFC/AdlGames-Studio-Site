@@ -51,7 +51,7 @@ nav ul li a {
 
 /* Efeito suave ao passar o mouse nos itens do menu */
 nav ul li a:hover {
-    color: #FFD700;
+    color: #6d38a8;
     transform: scale(1.1);
 }
 
@@ -82,7 +82,7 @@ nav ul li a:hover {
 }
 
 .close-menu:hover {
-    color: #FFD700;
+    color: #6d38a8;
 }
 
 /* Animação para o menu responsivo */
@@ -138,7 +138,7 @@ footer {
 }
 
 footer a {
-    color: #FFD700;
+    color: #6d38a8;
     text-decoration: none;
     font-weight: bold;
 }
