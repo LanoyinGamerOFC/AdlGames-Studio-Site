@@ -1,3 +1,6 @@
+/* © 2025 AdlGames Studio. Todos os direitos reservados. */
+/* Desenvolvido por AdlGames Studio | AdlGames.com.br */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +9,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -18,4 +22,24 @@ body {
     font-size: 50px;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
