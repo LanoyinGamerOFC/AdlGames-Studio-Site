@@ -28,7 +28,7 @@ header {
     transition: background 0.3s ease-in-out;
 }
 
-/* Transição de hover no menu (desktop) */
+/* Menu Desktop */
 nav ul {
     list-style: none;
     display: flex;
@@ -94,6 +94,7 @@ nav ul li a:hover {
     nav ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
@@ -102,12 +103,15 @@ nav ul li a:hover {
         transition: max-height 0.4s ease-in-out;
     }
 
+    /* Garante que o menu exiba todas as opções corretamente */
     nav ul.active {
-        display: flex;
+        max-height: none;
+        overflow: visible;
     }
 
     nav ul li {
         padding: 10px 0;
+        width: 100%;
     }
 
     .close-menu {
