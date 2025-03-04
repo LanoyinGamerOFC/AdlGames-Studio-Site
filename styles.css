@@ -69,6 +69,22 @@ nav ul li a:hover {
     transition: background 0.3s ease-in-out;
 }
 
+/* Estilização do botão de fechar */
+.close-menu {
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-menu:hover {
+    color: #FFD700;
+}
+
 /* Animação para o menu responsivo */
 @media screen and (max-width: 768px) {
     .menu-toggle {
@@ -92,6 +108,10 @@ nav ul li a:hover {
 
     nav ul li {
         padding: 10px 0;
+    }
+
+    .close-menu {
+        display: block;
     }
 }
 
