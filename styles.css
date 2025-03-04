@@ -23,22 +23,18 @@ header {
     width: 100%;
     position: absolute;
     top: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 15px 0;
+    transition: background 0.3s ease-in-out;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Menu padrão (desktop) */
+/* Transição de hover no menu (desktop) */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 nav ul li {
@@ -50,11 +46,13 @@ nav ul li a {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+/* Efeito suave ao passar o mouse nos itens do menu */
 nav ul li a:hover {
     color: #FFD700;
+    transform: scale(1.1);
 }
 
 /* Estilização do botão do menu (mobile) */
@@ -68,20 +66,24 @@ nav ul li a:hover {
     font-weight: bold;
     text-align: center;
     width: 100%;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Responsividade */
+/* Animação para o menu responsivo */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
     nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
     }
 
     nav ul.active {
