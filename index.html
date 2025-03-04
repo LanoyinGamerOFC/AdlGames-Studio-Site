@@ -18,12 +18,13 @@
                 ☰ Menu
             </div>
             <ul id="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Shop (Em breve)</a></li>
-                <li><a href="#">Entrar/Cadastrar</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Jogos</a></li>
+                <li><a href="#" onclick="closeMenu()">Início</a></li>
+                <li><a href="#" onclick="closeMenu()">Projetos</a></li>
+                <li><a href="#" onclick="closeMenu()">Shop (Em breve)</a></li>
+                <li><a href="#" onclick="closeMenu()">Entrar/Cadastrar</a></li>
+                <li><a href="#" onclick="closeMenu()">Notícias</a></li>
+                <li><a href="#" onclick="closeMenu()">Jogos</a></li>
+                <li class="close-menu" onclick="closeMenu()">✖ Fechar</li>
             </ul>
         </nav>
     </header>
@@ -49,6 +50,12 @@
             } else {
                 menu.style.maxHeight = "0px";
             }
+        }
+
+        function closeMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.remove("active");
+            menu.style.maxHeight = "0px";
         }
     </script>
 
