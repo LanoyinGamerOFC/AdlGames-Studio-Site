@@ -11,10 +11,13 @@
 </head>
 <body>
 
-    <!-- Menu de navegação -->
+    <!-- Menu de navegação responsivo -->
     <header>
         <nav>
-            <ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰ Menu
+            </div>
+            <ul id="menu">
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Shop (Em breve)</a></li>
@@ -32,8 +35,15 @@
     <!-- Rodapé com Copyright -->
     <footer>
         <p>&copy; 2025 AdlGames Studio. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <a href="https://youtube.com/@LanoyinGamerOFC" target="_blank">LanoyinGamerOFC</a></p>
+        <p>Desenvolvido por <a href="https://AdlGames.com.br" target="_blank">AdlGames Studio</a></p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
