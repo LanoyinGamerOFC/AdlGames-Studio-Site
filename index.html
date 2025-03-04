@@ -14,9 +14,7 @@
     <!-- Menu de navegação responsivo -->
     <header>
         <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                ☰ Menu
-            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
             <ul id="menu">
                 <li><a href="#" onclick="closeMenu()">Início</a></li>
                 <li><a href="#" onclick="closeMenu()">Projetos</a></li>
@@ -43,19 +41,11 @@
         function toggleMenu() {
             var menu = document.getElementById("menu");
             menu.classList.toggle("active");
-
-            // Animação de transição
-            if (menu.classList.contains("active")) {
-                menu.style.maxHeight = menu.scrollHeight + "px";
-            } else {
-                menu.style.maxHeight = "0px";
-            }
         }
 
         function closeMenu() {
             var menu = document.getElementById("menu");
             menu.classList.remove("active");
-            menu.style.maxHeight = "0px";
         }
     </script>
 
