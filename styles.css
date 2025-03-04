@@ -21,7 +21,7 @@ body {
 /* Cabeçalho */
 header {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     background: rgba(0, 0, 0, 0.9);
     padding: 15px 20px;
@@ -31,6 +31,7 @@ header {
     color: white;
     font-size: 20px;
     font-weight: bold;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -55,6 +56,7 @@ nav#sidebar {
     background: rgba(0, 0, 0, 0.95);
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
+    z-index: 999;
 }
 
 /* Quando ativado, o menu aparece */
@@ -121,13 +123,15 @@ nav#sidebar ul li a:hover {
 
 /* Estilização do rodapé */
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
-    text-align: center;
+    left: 0;
     width: 100%;
+    text-align: center;
     color: white;
     font-size: 14px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    z-index: 998; /* Agora fica atrás da barra lateral */
 }
 
 footer a {
