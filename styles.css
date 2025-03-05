@@ -35,11 +35,6 @@ header {
 }
 
 /* Logo */
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-}
-
 .logo a {
     text-decoration: none;
     color: white;
@@ -64,7 +59,6 @@ nav#sidebar {
     z-index: 999;
 }
 
-/* Quando ativado, o menu aparece */
 nav#sidebar.active {
     left: 0;
 }
@@ -79,15 +73,10 @@ nav#sidebar.active {
     color: white;
 }
 
-/* Estilização dos links do menu */
+/* Links do menu */
 nav#sidebar ul {
     list-style: none;
     padding: 0;
-}
-
-nav#sidebar ul li {
-    padding: 15px;
-    text-align: center;
 }
 
 nav#sidebar ul li a {
@@ -98,7 +87,6 @@ nav#sidebar ul li a {
     transition: color 0.3s ease-in-out;
 }
 
-/* Quando um item do menu é selecionado, ele fica roxo */
 nav#sidebar ul li a:hover {
     color: #8A2BE2;
 }
@@ -112,25 +100,27 @@ nav#sidebar ul li a:hover {
     animation: colorChange 3s linear infinite;
 }
 
-/* Keyframes para a animação de cor */
 @keyframes colorChange {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Emojis animados */
-.emoji-animation {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    animation: moveEmojis 2s infinite alternate;
+/* Efeito neon para os títulos */
+.glowing-text {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2;
+    animation: glow 1.5s infinite alternate;
 }
 
-@keyframes moveEmojis {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(20px); }
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9400D3, 0 0 40px #9400D3;
+    }
 }
 
 /* Rodapé */
@@ -142,8 +132,7 @@ footer {
     text-align: center;
     color: white;
     font-size: 14px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    z-index: 998; /* Fica abaixo da barra lateral */
+    z-index: 998;
 }
 
 footer a {
